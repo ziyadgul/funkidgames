@@ -10,13 +10,12 @@
     --card:#ffffffaa; --accent:#ff6600; --text:#061022;
     --radius:16px; --gap:20px; --maxw:1200px;
   }
-  *{box-sizing:border-box;}
+  *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    margin:0;
     font-family: 'Poppins', sans-serif;
     background: var(--bg);
-    min-height:100vh;
     color: var(--text);
+    min-height:100vh;
   }
   header{
     display:flex;
@@ -24,35 +23,19 @@
     align-items:center;
     padding:15px 40px;
     background:rgba(255,255,255,0.8);
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    position: sticky;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    position:sticky;
     top:0;
     z-index:1000;
     border-radius:0 0 var(--radius) var(--radius);
   }
-  .logo{
-    font-size:28px;
-    font-weight:700;
-    color:var(--accent);
-  }
-  nav a{
-    margin-left:20px;
-    text-decoration:none;
-    font-weight:600;
-    color: var(--text);
-  }
+  .logo{font-size:28px;font-weight:700;color:var(--accent);}
+  nav a{margin-left:20px;text-decoration:none;font-weight:600;color: var(--text);}
   nav a:hover{color: var(--accent);}
-  .hero{
-    text-align:center;
-    padding:60px 20px;
-  }
-  .hero h1{
-    font-size:48px;
-    margin-bottom:15px;
-  }
-  .hero p{
-    font-size:20px;
-  }
+  .hero{text-align:center;padding:60px 20px;}
+  .hero h1{font-size:48px;margin-bottom:15px;}
+  .hero p{font-size:20px;}
+  .section-title{text-align:center;font-size:32px;margin:40px 0;color:var(--accent);}
   .games-section{
     max-width: var(--maxw);
     margin:0 auto;
@@ -64,7 +47,7 @@
   .game-card{
     background: var(--card);
     border-radius: var(--radius);
-    padding:15px;
+    padding:10px;
     text-align:center;
     box-shadow:0 6px 12px rgba(0,0,0,0.2);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -80,9 +63,7 @@
     border-radius: var(--radius);
     margin-bottom:10px;
   }
-  .game-card h3{
-    margin:8px 0;
-  }
+  .game-card h3{margin:8px 0;}
   footer{
     text-align:center;
     padding:20px;
@@ -102,8 +83,10 @@
   <div class="logo">FunKidGames</div>
   <nav>
     <a href="#home">Home</a>
-    <a href="#games">Games</a>
-    <a href="#about">About</a>
+    <a href="#arcade">Arcade</a>
+    <a href="#puzzle">Puzzle</a>
+    <a href="#educational">Educational</a>
+    <a href="#adventure">Adventure</a>
   </nav>
 </header>
 
@@ -112,39 +95,104 @@
   <p>Play free, safe, and fun games for kids and everyone!</p>
 </section>
 
-<h2 style="text-align:center;margin-top:40px;">Featured Games</h2>
-<section class="games-section" id="games">
-
-  <!-- Game 1: 2048 -->
+<!-- Arcade Games -->
+<h2 class="section-title" id="arcade">Arcade Games</h2>
+<section class="games-section">
   <div class="game-card">
     <h3>2048 Puzzle</h3>
     <iframe src="https://play2048.co/" title="2048 Game"></iframe>
   </div>
-
-  <!-- Game 2: Tic Tac Toe -->
-  <div class="game-card">
-    <h3>Tic Tac Toe</h3>
-    <iframe src="https://www.mathsisfun.com/games/tic-tac-toe.html" title="Tic Tac Toe"></iframe>
-  </div>
-
-  <!-- Game 3: Snake -->
   <div class="game-card">
     <h3>Classic Snake</h3>
     <iframe src="https://playsnake.org/" title="Snake Game"></iframe>
   </div>
+  <div class="game-card">
+    <h3>Pacman Clone</h3>
+    <iframe src="https://patorjk.com/games/pacman/" title="Pacman Game"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Flappy Bird</h3>
+    <iframe src="https://copy.sh/flappy/" title="Flappy Bird"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Space Invaders</h3>
+    <iframe src="https://html5games.com/games/spaceinvaders/" title="Space Invaders"></iframe>
+  </div>
+</section>
 
-  <!-- Game 4: Memory Game -->
+<!-- Puzzle Games -->
+<h2 class="section-title" id="puzzle">Puzzle Games</h2>
+<section class="games-section">
+  <div class="game-card">
+    <h3>Tic Tac Toe</h3>
+    <iframe src="https://www.mathsisfun.com/games/tic-tac-toe.html" title="Tic Tac Toe"></iframe>
+  </div>
   <div class="game-card">
     <h3>Memory Match</h3>
     <iframe src="https://www.memory-improvement-tips.com/memory-game.html" title="Memory Game"></iframe>
   </div>
-
-  <!-- Game 5: Whack-a-Mole -->
   <div class="game-card">
-    <h3>Whack-a-Mole</h3>
-    <iframe src="https://www.coolmathgames.com/0-whack-a-mole" title="Whack-a-Mole"></iframe>
+    <h3>Jigsaw Puzzle</h3>
+    <iframe src="https://www.jigsawplanet.com/?rc=play&pid=28e360ed4a87" title="Jigsaw Puzzle"></iframe>
   </div>
+  <div class="game-card">
+    <h3>Sudoku</h3>
+    <iframe src="https://www.websudoku.com/" title="Sudoku"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Lights Out</h3>
+    <iframe src="https://www.coolmathgames.com/0-lights-out" title="Lights Out"></iframe>
+  </div>
+</section>
 
+<!-- Educational Games -->
+<h2 class="section-title" id="educational">Educational Games</h2>
+<section class="games-section">
+  <div class="game-card">
+    <h3>Typing Challenge</h3>
+    <iframe src="https://www.typing.com/student/games" title="Typing Challenge"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Math Quiz</h3>
+    <iframe src="https://www.mathplayground.com/ASB_Math_Quiz.html" title="Math Quiz"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Word Search</h3>
+    <iframe src="https://www.thewordsearch.com/" title="Word Search"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Spelling Bee</h3>
+    <iframe src="https://www.spellingcity.com/" title="Spelling Bee"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Geo Quiz</h3>
+    <iframe src="https://world-geography-games.com/" title="Geo Quiz"></iframe>
+  </div>
+</section>
+
+<!-- Adventure Games -->
+<h2 class="section-title" id="adventure">Adventure Games</h2>
+<section class="games-section">
+  <div class="game-card">
+    <h3>Adventure Platformer</h3>
+    <iframe src="https://www.crazygames.com/game/sonic-the-hedgehog" title="Sonic Adventure"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Maze Escape</h3>
+    <iframe src="https://www.crazygames.com/game/maze-run" title="Maze Escape"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Treasure Hunt</h3>
+    <iframe src="https://www.crazygames.com/game/treasure-quest" title="Treasure Hunt"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Jungle Adventure</h3>
+    <iframe src="https://www.crazygames.com/game/jungle-run" title="Jungle Adventure"></iframe>
+  </div>
+  <div class="game-card">
+    <h3>Island Explorer</h3>
+    <iframe src="https://www.crazygames.com/game/island-adventure" title="Island Explorer"></iframe>
+  </div>
 </section>
 
 <footer>
