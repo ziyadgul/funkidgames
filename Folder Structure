@@ -1,0 +1,19 @@
+funkidgames/
+│
+├── index.html                <- Home page with featured games
+├── style.css                 <- Global styles
+├── categories/
+│   ├── arcade.html
+│   ├── puzzle.html
+│   ├── adventure.html
+│   └── sports.html
+├── games/
+│   ├── 2048/
+│   │   └── index.html + js/css/assets
+│   ├── snake/
+│   ├── tic-tac-toe/
+│   ├── memory-match/
+│   └── whack-a-mole/
+└── assets/
+    ├── images/               <- Game thumbnails, icons
+    └── icons/
